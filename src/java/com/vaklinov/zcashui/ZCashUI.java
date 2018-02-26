@@ -784,9 +784,9 @@ extends JFrame
 			configOut.println("rpcport=8023");
 			configOut.println("# Well-known nodes to connect to (speeds up acquiring additional peers)");
 
-			for(String node : getAddNodes()) {
-				configOut.println(node);
-			}
+			// for(String node : getAddNodes()) {
+			// 	configOut.println(node);
+			// }
 
 			configOut.close();
 		}

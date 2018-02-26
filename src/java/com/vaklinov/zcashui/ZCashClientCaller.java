@@ -942,66 +942,24 @@ public class ZCashClientCaller
 			wrapStringParameter(key)
 		};
 		CommandExecutor caller = new CommandExecutor(params);
-    	String strResult = caller.execute();
+    	String strResult1 = caller.execute();
 
-		if (Util.stringIsEmpty(strResult) ||
-			(!strResult.trim().toLowerCase(Locale.ROOT).contains("error")))
+		if (Util.stringIsEmpty(strResult1) ||
+			(!strResult1.trim().toLowerCase(Locale.ROOT).contains("error")))
 		{
-			return strResult == null ? "" : strResult.trim();
+			return strResult1 == null ? "" : strResult1.trim();
+		} else {
+			// Second try a T key
+			String strResult2 = this.executeCommandAndGetSingleStringResponse(
+				"-rpcclienttimeout=5000", "importprivkey", wrapStringParameter(key));
+			if (Util.stringIsEmpty(strResult2) ||
+				(!strResult2.trim().toLowerCase(Locale.ROOT).contains("error")))
+			{
+				return strResult2 == null ? "" : strResult2.trim();
+			}		
+			// Obviously an error
+			throw new WalletCallException("Unexpected response from wallet: " + strResult1 + strResult2);
 		}
-
-		// Obviously we have an error trying to import a Z key
-		if (strResult.trim().toLowerCase(Locale.ROOT).startsWith("error") &&
-			(strResult.indexOf("{") != -1))
-		{
-   		 	 // Expecting an error of a T address key
-   		 	 String jsonPart = strResult.substring(strResult.indexOf("{"));
-  		     JsonValue response = null;
-  			 try
-  			 {
-  			   	response = Json.parse(jsonPart);
-  		 	 } catch (ParseException pe)
-  			 {
-  			   	 throw new WalletCallException(jsonPart + "\n" + pe.getMessage() + "\n", pe);
-  			 }
-
-  			 JsonObject respObject = response.asObject();
-  			 if ((respObject.getDouble("code", +123) == -1) &&
-  				 (respObject.getString("message", "ERR").indexOf("wrong network type") != -1))
-  			 {
-  				 // Obviously T address - do nothing here
-  			 } else
-  			 {
-  	    		 throw new WalletCallException("Unexpected response from wallet: " + strResult);
-  			 }
-		} else if (strResult.trim().toLowerCase(Locale.ROOT).startsWith("error code:"))
-		{
- 			 JsonObject respObject = Util.getJsonErrorMessage(strResult);
- 			 if ((respObject.getDouble("code", +123) == -1) &&
- 				 (respObject.getString("message", "ERR").indexOf("wrong network type") != -1))
- 			 {
- 				 // Obviously T address - do nothing here
- 			 } else
- 			 {
- 	    		 throw new WalletCallException("Unexpected response from wallet: " + strResult);
- 			 }
-		} else
-		{
-			throw new WalletCallException("Unexpected response from wallet: " + strResult);
-		}
-
-		// Second try a T key
-		strResult = this.executeCommandAndGetSingleStringResponse(
-			"-rpcclienttimeout=5000", "importprivkey", wrapStringParameter(key));
-
-		if (Util.stringIsEmpty(strResult) ||
-			(!strResult.trim().toLowerCase(Locale.ROOT).contains("error")))
-		{
-			return strResult == null ? "" : strResult.trim();
-		}
-
-		// Obviously an error
-		throw new WalletCallException("Unexpected response from wallet: " + strResult);
 	}
 
 

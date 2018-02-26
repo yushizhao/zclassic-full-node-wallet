@@ -218,13 +218,13 @@ public class OSUtil
 		
 		if (os == OS_TYPE.MAC_OS)
 		{
-			return new File(System.getProperty("user.home") + "/Library/Application Support/Zclassic").getCanonicalPath();
+			return new File(System.getProperty("user.home") + "/Library/Application Support/bitcoinzero").getCanonicalPath();
 		} else if (os == OS_TYPE.WINDOWS)
 		{
-			return new File(System.getenv("APPDATA") + "\\Zclassic").getCanonicalPath();
+			return new File(System.getenv("APPDATA") + "\\bitcoinzero").getCanonicalPath();
 		} else
 		{
-			return new File(System.getProperty("user.home") + "/.zclassic").getCanonicalPath();
+			return new File(System.getProperty("user.home") + "/.bitcoinzero").getCanonicalPath();
 		}
 	}
 
