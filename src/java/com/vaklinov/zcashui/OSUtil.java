@@ -114,7 +114,7 @@ public class OSUtil
 	}
 	
 	
-	// Returns the name of the zcl-cli tool - may vary depending on the OS.
+	// Returns the name of the BCZ-cli tool - may vary depending on the OS.
 	public static String getZCashCli()
 	{
 		String zcashcli = "bcz-cli";

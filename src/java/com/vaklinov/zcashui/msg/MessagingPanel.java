@@ -566,14 +566,14 @@ public class MessagingPanel
 
 			        JOptionPane.showMessageDialog(
 				        this.parentFrame,
-				        "The Z address used to send/receive messages needs to be supplied with ZCL: \n" +
+				        "The Z address used to send/receive messages needs to be supplied with BCZ: \n" +
 				        ownIdentity.getSendreceiveaddress() + "\n" +
-				        "You will be redirected to the UI tab for sending ZCL to add some balance to it. You need only\n" +
-				        "a small amount e.g. typically 0.1 ZCL is suffucient to send 500 messages. After sending some\n" +
-				        "ZCL you need to wait for the transaction to be confirmed (typically takes 2.5 minutes). It is\n" +
-				        "recommended to send ZCL to this Z address in two or more separate transactions (though one \n" +
+				        "You will be redirected to the UI tab for sending BCZ to add some balance to it. You need only\n" +
+				        "a small amount e.g. typically 0.1 BCZBCZ is suffucient to send 500 messages. After sending some\n" +
+				        "BCZ you need to wait for the transaction to be confirmed (typically takes 2.5 minutes). It is\n" +
+				        "recommended to send BCZ to this Z address in two or more separate transactions (though one \n" +
 				        "transaction is sufficient).",
-					    "Z address to send/receive messages needs to be supplied with ZCL...",
+					    "Z address to send/receive messages needs to be supplied with BCZ...",
 					    JOptionPane.INFORMATION_MESSAGE);
 
 						sendCashPanel.prepareForSending(ownIdentity.getSendreceiveaddress());
@@ -607,12 +607,12 @@ public class MessagingPanel
 		    	{
 			        JOptionPane.showMessageDialog(
 					    this.parentFrame,
-					    "The T address used to identify you in messaging must have NO ZCL balance: \n" +
+					    "The T address used to identify you in messaging must have NO BCZ balance: \n" +
 					    ownIdentity.getSenderidaddress() + "\n" +
 					    "However it currently has a non-zero balance! This might mean that you \n" +
 					    "accidentally used this T address in non-messaging transactions. It might\n" +
-					    "also mean that someone sent ZCL to it deliberately. To minimize the chance\n" +
-					    "of compromising your privacy you must transfer all ZCL from this T address\n" +
+					    "also mean that someone sent BCZ to it deliberately. To minimize the chance\n" +
+					    "of compromising your privacy you must transfer all BCZ from this T address\n" +
 					    "to some Z address ASAP!",
 						"Messaging identification address has balance!",
 						JOptionPane.WARNING_MESSAGE);
@@ -1207,14 +1207,14 @@ public class MessagingPanel
 	        	this.parentFrame,
 	        	"The Z address used to send/receive messages has insufficient balance: \n" +
 	        	ownIdentity.getSendreceiveaddress() + "\n" +
-	        	"You will be redirected to the UI tab for sending ZCL to add some balance to it. You need only\n" +
-	        	"a small amount e.g. typically 0.1 ZCL is suffucient to send 500 messages. After sending some\n" +
-	        	"ZCL you need to wait for the transaction to be confirmed (typically takes 2.5 minutes). It is\n" +
-	        	"recommended to send ZCL to this Z address in two or more separate transactions (though one \n" +
+	        	"You will be redirected to the UI tab for sending BCZ to add some balance to it. You need only\n" +
+	        	"a small amount e.g. typically 0.1 BCZ is suffucient to send 500 messages. After sending some\n" +
+	        	"BCZ you need to wait for the transaction to be confirmed (typically takes 2.5 minutes). It is\n" +
+	        	"recommended to send BCZ to this Z address in two or more separate transactions (though one \n" +
 	        	"transaction is sufficient).",
 		        "Z address to send/receive messages has Insufficient Balance", JOptionPane.ERROR_MESSAGE);
 
-	            // Restore controls and move to the send zcl tab etc.
+	            // Restore controls and move to the send BCZ tab etc.
 		        this.sendButton.setEnabled(true);
 				this.writeMessageTextArea.setEnabled(true);
 
@@ -1233,8 +1233,8 @@ public class MessagingPanel
 	        	ownIdentity.getSendreceiveaddress() + "\n" +
 	        	"This usually means that the previous mesasaging transaction is not yet confirmed. You\n" +
 	        	"need to wait for the transaciton to be confirmed (typically takes 2.5 minutes). This\n" +
-	        	"problem may be avoided if you send ZCL to this Z address in two or more separate \n" +
-	        	"transactions (when you supply the ZCL balance to be used for messaging).",
+	        	"problem may be avoided if you send BCZ to this Z address in two or more separate \n" +
+	        	"transactions (when you supply the BCZ balance to be used for messaging).",
 		        "Z address to send/receive messages has Insufficient Confirmed Balance", JOptionPane.ERROR_MESSAGE);
 
 	            // Restore controls and move to the send cash tab etc.
@@ -1295,7 +1295,7 @@ public class MessagingPanel
         		"packaged as a memo it comes up to " + overallSendingLength +
         		" bytes (maximum is " + maxSendingLength + " bytes)\n\n" +
         		"Advice: try to reduce the message length by " + difference + " characters. The current\n" +
-        		"version of the ZCL messaging protocol supports approximately 330\n" +
+        		"version of the BCZ messaging protocol supports approximately 330\n" +
         		"characters per message (number is not exact - depends on character\n" +
         		"encoding specifics).",
 	        	"Message size exceeds currently supported limits...", JOptionPane.ERROR_MESSAGE);

@@ -217,7 +217,7 @@ public class WalletOperations
 			{
 				this.parent.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
 
-				path = this.clientCaller.exportWallet("zclprivatekeys");
+				path = this.clientCaller.exportWallet("BCZprivatekeys");
 				this.backupTracker.handleBackup();
 				this.parent.setCursor(oldCursor);
 

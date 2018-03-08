@@ -312,7 +312,7 @@ public class CreateGroupDialog
 				"has been created successfully. All messages sent by individual users to the " +
 				"group will be sent to Z address:\n"
 				+ ZAddress + "\n\n" +
-				"IMPORTANT: Do NOT send any ZCL to this address except in cases of messaging transactions. Any\n" +
+				"IMPORTANT: Do NOT send any BCZ to this address except in cases of messaging transactions. Any\n" +
 				"funds sent to this address may be spent by any user who has access to the group keyphrase!",
 				"Group Successfully Created",
 				JOptionPane.INFORMATION_MESSAGE);

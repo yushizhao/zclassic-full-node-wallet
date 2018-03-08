@@ -128,7 +128,7 @@ public class ZCashClientCaller
 		{
 		    throw new IOException(
 		    	"The Bitcoin Zero command line utility " + zcashcli.getCanonicalPath() +
-		    	" was found, but zcld was not found!");
+		    	" was found, but bczd was not found!");
 		}
 	}
 

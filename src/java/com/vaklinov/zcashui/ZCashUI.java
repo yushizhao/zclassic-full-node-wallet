@@ -162,7 +162,7 @@ extends JFrame
 		tabs.addTab("My Addresses ",
 				new ImageIcon(cl.getResource("images/own-addresses.png")),
 				addresses = new AddressesPanel(this, clientCaller, errorReporter));
-		tabs.addTab("Send ZCL ",
+		tabs.addTab("Send BCZ ",
 				new ImageIcon(cl.getResource("images/send.png")),
 				sendPanel = new SendCashPanel(clientCaller, errorReporter, installationObserver, backupTracker));
 		tabs.addTab("Address Book ",
@@ -598,7 +598,7 @@ extends JFrame
 				}
 			}
 
-			// If zcld is currently not running, do a startup of the daemon as a child process
+			// If bczd is currently not running, do a startup of the daemon as a child process
 			// It may be started but not ready - then also show dialog
 			ZCashInstallationObserver initialInstallationObserver =
 					new ZCashInstallationObserver(OSUtil.getProgramDirectory());
@@ -675,7 +675,7 @@ extends JFrame
 				JOptionPane.showMessageDialog(
 						null,
 						"There was a problem communicating with the Bitcoin Zero daemon/wallet. \n" +
-								"Please ensure that the Bitcoin Zero server zcld is started (e.g. via \n" +
+								"Please ensure that the Bitcoin Zero server bczd is started (e.g. via \n" +
 								"command  \"bczd --daemon\"). Error Message: \n" +
 								wce.getMessage() +
 								"See the console/logfile output for more detailed error information!",

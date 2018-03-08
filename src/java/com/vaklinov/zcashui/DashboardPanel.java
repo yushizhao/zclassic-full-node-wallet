@@ -470,11 +470,11 @@ extends WalletTabPanel
 		String text =
 				"<html><p text-align: right>" +
 						"<span style=\"" + color1 + "\">Transparent (T) Balance: " +
-						transparentUCBalance + " ZCL </span><br/> " +
+						transparentUCBalance + " BCZ </span><br/> " +
 						"<span style=\"" + color2 + "\">Private (Z) Balance: " +
-						privateUCBalance + " ZCL </span><br/> " +
+						privateUCBalance + " BCZ </span><br/> " +
 						"<span style=\"font-weight:bold;" + color3 + "\">Total: " +
-						totalUCBalance + " ZCL </span>"
+						totalUCBalance + " BCZ </span>"
 								+ "</p></html>";
 
 		this.walletBalanceLabel.setText(text);
@@ -488,9 +488,9 @@ extends WalletTabPanel
 					"Unconfirmed (unspendable) balance is being shown due to an<br/>" +
 					"ongoing transaction! Actual confirmed (spendable) balance is:<br/>" +
 					"<span style=\"font-size:5px\"><br/></span>" +
-					"Transparent (T): " + transparentBalance + " ZCL<br/>" +
-					"Private (Z): <span>" + privateBalance + " ZCL</span><br/>" +
-					"Total: <span style=\"font-weight:bold\">" + totalBalance + " ZCL</span>" +
+					"Transparent (T): " + transparentBalance + " BCZ<br/>" +
+					"Private (Z): <span>" + privateBalance + " BCZ</span><br/>" +
+					"Total: <span style=\"font-weight:bold\">" + totalBalance + " BCZ</span>" +
 					"</html>";
 		}
 
