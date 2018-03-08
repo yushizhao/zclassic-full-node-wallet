@@ -522,7 +522,7 @@ public class MessagingPanel
 			{
 		        JOptionPane.showMessageDialog(
 	                this.parentFrame,
-	                "Welcome to Zclassic Messaging. As a start you will need to create a new messaging\n" +
+	                "Welcome to Bitcoin Zero Messaging. As a start you will need to create a new messaging\n" +
 	                "identity for yourself. As a part of this messaging identity a pair of T+Z addresses\n" +
 	                "will be created. The T address is to be used for identifying you to other users.\n" +
 	                "It must never be used for other financial transactions since this might reduce or\n" +
@@ -776,7 +776,7 @@ public class MessagingPanel
 				"Your messaging identity has been succesfully exported to file: \n" +
 				f.getName() + "\n" +
 				"You may give this file to other users to establish contact with them.\n" +
-				"They can then import it into their Zclassic Full-Node Desktop Wallet.",
+				"They can then import it into their Bitcoin Zero Full-Node Desktop Wallet.",
 				"Successfully Exported Messaging Identity", JOptionPane.INFORMATION_MESSAGE);
 		} catch (Exception ex)
 		{

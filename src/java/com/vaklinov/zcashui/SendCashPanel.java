@@ -270,7 +270,7 @@ extends WalletTabPanel
 							SendCashPanel.this.getRootPane().getParent(),
 							"An error occurred when sending ZCL:\n" +
 									errMessage + "\n\n" +
-									"Please check that the Zclassic daemon is running and\n" +
+									"Please check that the Bitcoin Zero daemon is running and\n" +
 									"the sending parameters are correct.\n",
 									"Error Sending ZCL", JOptionPane.ERROR_MESSAGE);
 				}
