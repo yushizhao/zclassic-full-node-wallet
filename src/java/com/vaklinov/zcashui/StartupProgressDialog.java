@@ -51,7 +51,7 @@ public class StartupProgressDialog extends JFrame {
     {
         this.clientCaller = clientCaller;
         
-        URL iconUrl = this.getClass().getClassLoader().getResource("images/zclassic-logo.png");
+        URL iconUrl = this.getClass().getClassLoader().getResource("images/bitcoinzero-logo.png");
         imageIcon = new ImageIcon(iconUrl);
         imageLabel.setIcon(imageIcon);
         imageLabel.setBorder(BorderFactory.createEmptyBorder(16, 16, 0, 16));
@@ -61,7 +61,7 @@ public class StartupProgressDialog extends JFrame {
         southPanel.setBorder(BorderFactory.createEmptyBorder(0, 16, 16, 16));
         contentPane.add(imageLabel, BorderLayout.NORTH);
 		JLabel zcashWalletLabel = new JLabel(
-			"<html><span style=\"font-style:italic;font-weight:bold;font-size:2.2em\">" + 
+			"<html><span style=\"font-style:Helvetica;font-weight:bold;font-size:2.2em\">" + 
 		    "Bitcoin Zero Wallet</span></html>");
 		zcashWalletLabel.setBorder(BorderFactory.createEmptyBorder(16, 16, 16, 16));
 		// todo - place in a panel with flow center

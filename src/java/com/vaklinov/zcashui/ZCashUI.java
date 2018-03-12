@@ -134,7 +134,7 @@ extends JFrame
 
 		ClassLoader cl = this.getClass().getClassLoader();
 
-		this.setIconImage(new ImageIcon(cl.getResource("images/zclassic-logo.png")).getImage());
+		this.setIconImage(new ImageIcon(cl.getResource("images/bitcoinzero-logo.png")).getImage());
 		System.out.println(cl.getResource("config/addnodes.txt").getPath());
 
 		Container contentPane = this.getContentPane();
@@ -559,10 +559,10 @@ extends JFrame
 		{
 			OS_TYPE os = OSUtil.getOSType();
 
-			if ((os == OS_TYPE.WINDOWS) || (os == OS_TYPE.MAC_OS))
-			{
+			// if ((os == OS_TYPE.WINDOWS) || (os == OS_TYPE.MAC_OS))
+			// {
 				possiblyCreateZENConfigFile();
-			}
+			// }
 
 			Log.info("Bitcoin Zero Full-Node Desktop Wallet (GUI, made in Java & Swing)");
 			Log.info("OS: " + System.getProperty("os.name") + " = " + os);

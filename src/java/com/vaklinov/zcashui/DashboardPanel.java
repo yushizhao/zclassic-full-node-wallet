@@ -121,13 +121,13 @@ extends WalletTabPanel
 		balanceStatusPanel.setLayout(new BorderLayout(3, 3));
 
 		JPanel tempPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 5, 9));
-		JLabel logoLabel = new JLabel(new ImageIcon(
-				this.getClass().getClassLoader().getResource("images/zclassic-logo-small.png")));
-		tempPanel.add(logoLabel);
-		// TODO: use relative size
-		JLabel zcLabel = new JLabel(" Bitcoin Zero Wallet ");
-		zcLabel.setFont(new Font("Helvetica", Font.BOLD | Font.ITALIC, 28));
-		tempPanel.add(zcLabel);
+		// JLabel logoLabel = new JLabel(new ImageIcon(
+		// 		this.getClass().getClassLoader().getResource("images/bitcoinzero-logo-small.png")));
+		// tempPanel.add(logoLabel);
+		// // TODO: use relative size
+		// JLabel zcLabel = new JLabel(" Bitcoin Zero Wallet ");
+		// zcLabel.setFont(new Font("Helvetica", Font.BOLD | Font.ITALIC, 28));
+		// tempPanel.add(zcLabel);
 		tempPanel.setToolTipText("Powered by Bitcoin Zero");
 		balanceStatusPanel.add(tempPanel, BorderLayout.WEST);
 		// TODO: use relative size - only!
